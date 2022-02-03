@@ -1,0 +1,19 @@
+import cv
+import cv2
+
+
+#loading the image from the same folder
+original=cv2.imread("dogcat.jpeg")    #image should be selected accordingly from the same destiny
+
+#change(original to pencil)
+greyImg=cv2.cvtColor(original,cv2.COLOR_BGR2GRAY)
+inverted_image= 255-greyImg
+cv2.imshow("grey image",greyImg)
+cv2.imshow("inverted",inverted_image)
+blurred=cv2.GaussianBlur(inverted_image, (21,21),0)
+cv2.imshow("blurred",blurred)
+inverted_blurred=255-blurred
+cv2.imshow("inverted_blurred",inverted_blurred)
+pencil_sketch=cv2.divide(greyImg,inverted_blurred,scale=256.0)
+cv2.imshow("pencil",pencil_sketch)
+cv2.waitKey(0)
