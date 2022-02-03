@@ -3,7 +3,7 @@ import cv2
 
 
 #loading the image from the same folder
-original=cv2.imread("dogcat.jpeg")    #image should be selected accordingly from the same destiny
+original=cv2.imread("dogcat.jpeg")    #image should be selected accordingly
 
 #change(original to pencil)
 greyImg=cv2.cvtColor(original,cv2.COLOR_BGR2GRAY)
