@@ -1,0 +1,3 @@
+import qrcode
+img = qrcode.make("/home/divyabezawada/Pictures/2017-12-31-12-34-51-187.jpg")
+img.save("popsCat.png")
